@@ -1,6 +1,6 @@
 # Resume project
 
-- Maintain one shared layout and three data-driven variants: game, frontend, and lead.
+- Maintain one shared layout and three data-driven variants: html5GameEngineer, frontendPlatformEngineer, and technicalEngineeringLead.
 - Keep shared employment facts, images, links, and projects in `src/data/shared.ts`; role-specific content and PDF filenames belong in `src/data/variants.ts`. Compose them in `src/data/resume.ts`.
 - Preserve two A4 pages and reverse-chronological work experience in the main column. Keep both Playrix roles grouped and RubyPlay together on page one.
 - Preserve the full-height navy sidebars. Page one: Details (including profile links), Skills, Open Source. Page two: Languages, Education.

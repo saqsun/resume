@@ -15,7 +15,7 @@ export function useResumeVariant() {
     );
     if (routeVariant) return routeVariant;
     const value = new URLSearchParams(window.location.search).get("variant");
-    return isVariantId(value) ? value : "game";
+    return isVariantId(value) ? value : "html5GameEngineer";
   });
   const selectVariant = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;

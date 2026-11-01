@@ -1,9 +1,9 @@
 import type { VariantId } from "./variants";
 
 export const resumeRoutes: Record<VariantId, string> = {
-  game: "/senior-lead-html5-game-engineer",
-  frontend: "/senior-frontend-platform-engineer",
-  lead: "/technical-engineering-lead",
+  html5GameEngineer: "/senior-lead-html5-game-engineer",
+  frontendPlatformEngineer: "/senior-frontend-platform-engineer",
+  technicalEngineeringLead: "/technical-engineering-lead",
 };
 
 export function getRouteVariant(

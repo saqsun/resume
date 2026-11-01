@@ -1,4 +1,7 @@
-export type VariantId = "game" | "frontend" | "lead";
+export type VariantId =
+  | "html5GameEngineer"
+  | "frontendPlatformEngineer"
+  | "technicalEngineeringLead";
 
 export interface VariantData {
   title: string;
@@ -8,7 +11,7 @@ export interface VariantData {
 }
 
 export const variants: Record<VariantId, VariantData> = {
-  game: {
+  html5GameEngineer: {
     title: "Senior / Lead HTML5 Game Engineer",
     summary:
       "HTML5 game engineer and technical lead with 15+ years building browser games, reusable engines, and production tooling. Expertise in TypeScript, PixiJS, WebGL, mobile performance, and delivery from prototype through release.",
@@ -91,7 +94,7 @@ export const variants: Record<VariantId, VariantData> = {
       },
     },
   },
-  frontend: {
+  frontendPlatformEngineer: {
     title: "Senior Frontend / Platform Engineer",
     summary:
       "Frontend / Platform Engineer with 15+ years building production applications, reusable architecture, and developer tooling. Strong in TypeScript, React, API integration, browser performance, and build systems; experienced owning delivery and mentoring engineers.",
@@ -174,7 +177,7 @@ export const variants: Record<VariantId, VariantData> = {
       },
     },
   },
-  lead: {
+  technicalEngineeringLead: {
     title: "Technical Lead / Engineering Lead",
     summary:
       "Technical / Engineering Lead with 15+ years building products and leading teams. Hands-on in TypeScript, frontend architecture, browser performance, and tooling. Experienced in technical strategy, mentoring, cross-functional delivery, and production reliability.",
@@ -264,7 +267,8 @@ export function isVariantId(value: string | null): value is VariantId {
 }
 
 export const pdfFiles: Record<VariantId, string> = {
-  game: "Sargis-Sargsyan-Senior-Lead-HTML5-Game-Engineer.pdf",
-  frontend: "Sargis-Sargsyan-Senior-Frontend-Platform-Engineer.pdf",
-  lead: "Sargis-Sargsyan-Technical-Engineering-Lead.pdf",
+  html5GameEngineer: "Sargis-Sargsyan-Senior-Lead-HTML5-Game-Engineer.pdf",
+  frontendPlatformEngineer:
+    "Sargis-Sargsyan-Senior-Frontend-Platform-Engineer.pdf",
+  technicalEngineeringLead: "Sargis-Sargsyan-Technical-Engineering-Lead.pdf",
 };
