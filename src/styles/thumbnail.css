@@ -1,0 +1,37 @@
+.thumbnail-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-content);
+  margin-top: var(--space-content);
+}
+
+.project-thumbnail {
+  width: 80pt;
+  flex-shrink: 0;
+}
+
+.project-thumbnail > a {
+  display: block;
+}
+
+.thumbnail {
+  display: block;
+  width: 80pt;
+  height: 40pt;
+  object-fit: cover;
+  object-position: center;
+  background: #101a24;
+  border: 0.5pt solid #dce1e8;
+  border-radius: 4pt;
+}
+
+figcaption {
+  font-size: 9pt;
+  line-height: 12pt;
+  margin-top: var(--space-content);
+}
+
+.thumbnail-contain {
+  object-fit: contain;
+  padding: 3pt;
+}

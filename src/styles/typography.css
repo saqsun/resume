@@ -1,0 +1,21 @@
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 26pt;
+  line-height: 29pt;
+  margin-bottom: 3pt;
+}
+
+h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 14pt;
+  line-height: 17pt;
+  margin-bottom: var(--space-content);
+}
+
+h3 {
+  font-size: 11pt;
+  line-height: 14pt;
+  font-weight: 600;
+}

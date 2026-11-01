@@ -1,0 +1,44 @@
+:root {
+  --space-compact: 4pt;
+  --space-meta: 6pt;
+  --space-content: 8pt;
+  --space-section: 24pt;
+  --space-company-divider: 7pt;
+  --space-sidebar-divider: 12pt;
+  font-family: "Source Sans 3", sans-serif;
+  color: #292e37;
+  background: #e9edf2;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #168aff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #168aff;
+  outline-offset: 3px;
+}
+
+p,
+h1,
+h2,
+h3,
+ul,
+figure {
+  margin: 0;
+}

@@ -1,0 +1,30 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  :root {
+    background: white;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .toolbar {
+    display: none;
+  }
+  .resume {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    box-shadow: none;
+    break-after: page;
+  }
+  .page:last-child {
+    break-after: auto;
+  }
+  a {
+    text-decoration: none;
+  }
+}

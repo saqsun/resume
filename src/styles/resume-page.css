@@ -1,0 +1,66 @@
+.resume {
+  display: grid;
+  gap: 24px;
+  padding-bottom: 32px;
+  width: max-content;
+  margin: auto;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  background: linear-gradient(to right, #ffffff 0 429pt, #0b2945 429pt 100%);
+  box-shadow: 0 2px 12px #172b4320;
+  padding: 0 48pt;
+  font-size: 10pt;
+  line-height: 13.5pt;
+}
+
+.page-header {
+  position: absolute;
+  top: 33pt;
+  left: 48pt;
+  display: flex;
+  align-items: center;
+  gap: 13pt;
+}
+
+.profile-portrait {
+  border-radius: 50%;
+  width: 50pt;
+  height: 50pt;
+  object-fit: cover;
+}
+
+.page-header p {
+  font-size: 10pt;
+  line-height: 14pt;
+}
+
+.resume-columns {
+  display: grid;
+  grid-template-columns: 367pt 127pt;
+  gap: 29pt;
+  padding-top: 110pt;
+}
+
+.page-2 .resume-columns {
+  padding-top: 34pt;
+}
+
+footer {
+  position: absolute;
+  bottom: 22pt;
+  left: 48pt;
+  right: 48pt;
+  display: flex;
+  justify-content: space-between;
+  color: #69717c;
+  font-size: 8pt;
+  line-height: 10pt;
+}
+
+footer > span:last-child {
+  color: #d4e0ec;
+}

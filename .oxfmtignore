@@ -1,0 +1,4 @@
+public/
+dist/
+output/
+package-lock.json

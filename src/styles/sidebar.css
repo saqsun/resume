@@ -1,0 +1,162 @@
+aside {
+  font-size: 9pt;
+  line-height: 14pt;
+  color: #f4f7fb;
+}
+
+aside h2 {
+  font-size: 11pt;
+  line-height: 14pt;
+  margin-bottom: var(--space-content);
+}
+
+.sidebar-section {
+  margin: 0;
+}
+
+.sidebar-section + .sidebar-section,
+.open-source-project + .open-source-project {
+  position: relative;
+  margin-top: var(--space-sidebar-divider);
+  padding-top: var(--space-sidebar-divider);
+}
+
+.sidebar-section + .sidebar-section::before,
+.open-source-project + .open-source-project::before {
+  content: "";
+  position: absolute;
+  top: -0.25pt;
+  left: 0;
+  right: 0;
+  border-top: 0.5pt solid rgb(168 191 213 / 30%);
+  pointer-events: none;
+}
+
+.sidebar-section nav {
+  display: grid;
+  gap: var(--space-compact);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  line-height: 12pt;
+}
+
+.open-source-project {
+  margin: 0;
+}
+
+.open-source-project > * + * {
+  margin-top: var(--space-content);
+}
+
+.open-source-project h3 {
+  font-size: 9pt;
+  line-height: 14pt;
+}
+
+aside h2,
+aside h3 {
+  color: #ffffff;
+}
+
+aside a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2pt;
+  text-decoration-color: #a8bfd5;
+}
+
+aside a:hover {
+  text-decoration-color: #ffffff;
+}
+
+aside a:focus-visible {
+  outline-color: #ffffff;
+}
+
+.contact-details {
+  display: grid;
+  gap: var(--space-compact);
+}
+
+.contact-details > a {
+  font-size: 9pt;
+  line-height: 14pt;
+  margin: 0;
+}
+
+.contact-email {
+  white-space: nowrap;
+}
+
+.language-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  line-height: 18px;
+}
+
+.language-bar {
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin-top: 3pt;
+  background: #506b83;
+}
+
+.language-bar > span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #f4f7fb;
+}
+
+.sidebar-education {
+  display: grid;
+  gap: var(--space-content);
+}
+
+.sidebar-education h3 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+}
+
+.sidebar-education p,
+.sidebar-education h3 {
+  margin: 0;
+}
+
+.education-degree {
+  display: grid;
+  gap: var(--space-compact);
+}
+
+.education-university,
+.education-years {
+  color: #c5d4e3;
+}
+
+.education-years {
+  font-size: 9pt;
+  line-height: 12pt;
+}
+
+.contact-details .contact-links {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  font-size: 9pt;
+  line-height: 14pt;
+  white-space: nowrap;
+}
+
+.contact-links a + a::before {
+  content: "·";
+  display: inline-block;
+  margin-inline: 3pt;
+  color: #c5d4e3;
+}

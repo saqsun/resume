@@ -1,0 +1,129 @@
+.summary {
+  margin-bottom: var(--space-section);
+}
+
+.job-entry {
+  display: flow-root;
+  margin: 0;
+  break-inside: avoid;
+}
+
+.job-entry + .job-entry {
+  margin-top: 14pt;
+}
+
+.job-entry > :last-child,
+.company-group > :last-child {
+  margin-bottom: 0;
+}
+
+.job-entry li:last-child {
+  margin-bottom: 0;
+}
+
+.date {
+  color: #596b83;
+  font-size: 9pt;
+  line-height: 11pt;
+  margin-block: var(--space-meta);
+}
+
+.job-entry > .intro {
+  margin-bottom: 0;
+}
+
+.job-entry > .intro + ul {
+  margin-top: var(--space-content);
+}
+
+.job-entry > .thumbnail-list,
+.company-group > .thumbnail-list {
+  margin-block: var(--space-content) 0;
+}
+
+.job-entry ul {
+  padding-left: 14pt;
+}
+
+.job-entry li {
+  padding-left: 0;
+  margin-bottom: var(--space-compact);
+}
+
+.company-group {
+  display: flow-root;
+  margin: 0;
+  break-inside: avoid;
+}
+
+.company-heading {
+  margin-bottom: var(--space-compact);
+  font-weight: 700;
+}
+
+.company-roles {
+  border-left: 1pt solid #dce1e8;
+  padding-left: 12pt;
+}
+
+.company-roles .job-entry {
+  position: relative;
+}
+
+.company-roles .job-entry::before {
+  content: "";
+  position: absolute;
+  left: -15pt;
+  top: 5pt;
+  width: 5pt;
+  height: 5pt;
+  border-radius: 50%;
+  background: #8190a8;
+}
+
+.company-roles .job-entry + .job-entry {
+  margin-top: var(--space-content);
+}
+
+.employment-list > .job-entry,
+.employment-list > .company-group {
+  position: relative;
+}
+
+.employment-list
+  > :is(.job-entry, .company-group)
+  + :is(.job-entry, .company-group) {
+  margin-top: var(--space-company-divider);
+  padding-top: var(--space-company-divider);
+}
+
+.employment-list
+  > :is(.job-entry, .company-group)
+  + :is(.job-entry, .company-group)::after {
+  content: "";
+  position: absolute;
+  top: -0.25pt;
+  left: -30pt;
+  right: 0;
+  height: 0;
+  border-top: 0.5pt solid #dce1e8;
+  pointer-events: none;
+}
+
+.employer-heading {
+  position: relative;
+}
+
+.company-logo {
+  position: absolute;
+  left: -30pt;
+  top: 0;
+  width: 22pt;
+  height: 22pt;
+  object-fit: contain;
+  object-position: center;
+  padding: 2pt;
+  border: 0.5pt solid #e2e7ed;
+  border-radius: 3pt;
+  background: #ffffff;
+}

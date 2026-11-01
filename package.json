@@ -1,0 +1,48 @@
+{
+  "name": "resume",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#components/*": "./src/components/*",
+    "#data/*": "./src/data/*",
+    "#lib/*": "./src/lib/*",
+    "#pages/*": "./src/pages/*",
+    "#styles/*": "./src/styles/*",
+    "#src/*": "./src/*"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/build-routes.ts",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt --ignore-path .oxfmtignore",
+    "format:check": "oxfmt --ignore-path .oxfmtignore --check",
+    "check": "npm run typecheck && npm run lint && npm run format:check",
+    "export:pdf": "npm run build && node scripts/export-pdf.ts",
+    "verify:site": "node scripts/verify-site.ts"
+  },
+  "dependencies": {
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "@fontsource/source-sans-3": "^5.3.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.58.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  },
+  "engines": {
+    "node": ">=24.22.2 <25"
+  }
+}
