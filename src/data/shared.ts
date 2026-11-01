@@ -1,11 +1,38 @@
 export const companies = {
-  ixilix: { name: "Ixilix", logo: "companies/ixilix.webp" },
-  playrix: { name: "Playrix", logo: "companies/playrix.webp" },
-  rubyplay: { name: "RubyPlay", logo: "companies/rubyplay.webp" },
-  voodoo: { name: "Voodoo", logo: "companies/voodoo.webp" },
-  armath: { name: "Armath", logo: "companies/koreez.webp" },
-  rockbite: { name: "Rockbite", logo: "companies/rockbite.webp" },
-  plexonic: { name: "Plexonic", logo: "companies/plexonic.webp" },
+  ixilix: {
+    name: "Ixilix",
+    logo: "companies/ixilix.webp",
+    href: "https://www.ixilix.com/",
+  },
+  playrix: {
+    name: "Playrix",
+    logo: "companies/playrix.webp",
+    href: "https://playrix.com/",
+  },
+  rubyplay: {
+    name: "RubyPlay",
+    logo: "companies/rubyplay.webp",
+    href: "https://rubyplay.com/",
+  },
+  voodoo: {
+    name: "Voodoo",
+    logo: "companies/voodoo.webp",
+    href: "https://www.voodoo.io/",
+  },
+  armath: {
+    name: "Armath (formerly Koreez)",
+    logo: "companies/koreez.webp",
+  },
+  rockbite: {
+    name: "Rockbite Games",
+    logo: "companies/rockbite.webp",
+    href: "https://rockbitegames.com/",
+  },
+  plexonic: {
+    name: "Plexonic",
+    logo: "companies/plexonic.webp",
+    href: "https://plexonic.com/",
+  },
 };
 
 export const shared = {
@@ -47,7 +74,7 @@ export const shared = {
     {
       id: "ixilix",
       company: companies.ixilix,
-      title: "Frontend Team Lead at Ixilix",
+      role: "Frontend Team Lead",
       date: "Mar 2026 - May 2026",
       images: [
         {
@@ -74,16 +101,14 @@ export const shared = {
     },
     {
       id: "playrix-lead",
-      roleTitle: "Technical Lead",
       company: companies.playrix,
-      title: "Technical Lead at Playrix",
+      role: "Technical Lead",
       date: "Jan 2026 - Mar 2026",
     },
     {
       id: "playrix-framework",
-      roleTitle: "Programming Lead, Playables Framework",
       company: companies.playrix,
-      title: "Programming Lead, Playables Framework at Playrix",
+      role: "Programming Lead, Playables Framework",
       date: "Jul 2025 - Dec 2025",
       images: [
         {
@@ -106,7 +131,7 @@ export const shared = {
     {
       id: "rubyplay",
       company: companies.rubyplay,
-      title: "Senior Game Engine Developer at RubyPlay",
+      role: "Senior Game Engine Developer",
       date: "Sep 2024 - May 2025",
       images: [
         {
@@ -129,7 +154,7 @@ export const shared = {
     {
       id: "voodoo",
       company: companies.voodoo,
-      title: "Lead Browser Game Developer at Voodoo",
+      role: "Lead Browser Game Developer",
       date: "Sep 2023 - Aug 2024",
       images: [
         {
@@ -147,7 +172,7 @@ export const shared = {
     {
       id: "armath",
       company: companies.armath,
-      title: "Co-Founder & CEO at Armath (formerly Koreez)",
+      role: "Co-Founder & CEO",
       date: "Jan 2016 - Sep 2023",
       images: [
         {
@@ -175,7 +200,7 @@ export const shared = {
     {
       id: "rockbite",
       company: companies.rockbite,
-      title: "Senior Software Engineer at Rockbite Games",
+      role: "Senior Software Engineer",
       date: "Jun 2014 - May 2015",
       images: [
         {
@@ -193,7 +218,7 @@ export const shared = {
     {
       id: "plexonic",
       company: companies.plexonic,
-      title: "Game Developer at Plexonic",
+      role: "Game Developer",
       date: "Jan 2011 - Jun 2014",
       images: [
         {

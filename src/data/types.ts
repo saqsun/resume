@@ -12,14 +12,14 @@ export interface ThumbnailData {
 
 export interface Company {
   name: string;
+  href?: string;
   logo: string;
 }
 
 export interface Job {
   id: string;
   company: Company;
-  roleTitle?: string;
-  title: string;
+  role: string;
   date: string;
   intro: string;
   bullets: string[];

@@ -1,5 +1,6 @@
 import type { Job } from "#data/types";
 import { CompanyLogo } from "./CompanyLogo";
+import { CompanyName } from "./CompanyName";
 import { ThumbnailList } from "./Thumbnail";
 import { JobEntry } from "./JobEntry";
 
@@ -11,14 +12,14 @@ export function CompanyGroup({ jobs, id }: { jobs: Job[]; id: string }) {
     <section className="company-group" aria-labelledby={headingId}>
       <h3 id={headingId} className="company-heading employer-heading">
         <CompanyLogo company={company} />
-        {company.name}
+        <CompanyName company={company} />
       </h3>
       <div className="company-roles">
         {jobs.map((job) => (
           <JobEntry
-            key={job.title}
+            key={job.id}
             job={job}
-            title={job.roleTitle}
+            showCompany={false}
             showImages={false}
           />
         ))}

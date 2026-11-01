@@ -264,7 +264,7 @@ export function isVariantId(value: string | null): value is VariantId {
 }
 
 export const pdfFiles: Record<VariantId, string> = {
-  game: "Sargis-Sargsyan-HTML5-Game-Engineer.pdf",
-  frontend: "Sargis-Sargsyan-Frontend-Platform-Engineer.pdf",
+  game: "Sargis-Sargsyan-Senior-Lead-HTML5-Game-Engineer.pdf",
+  frontend: "Sargis-Sargsyan-Senior-Frontend-Platform-Engineer.pdf",
   lead: "Sargis-Sargsyan-Technical-Engineering-Lead.pdf",
 };

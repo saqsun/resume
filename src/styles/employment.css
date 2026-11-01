@@ -114,6 +114,14 @@
   position: relative;
 }
 
+.employer-heading a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: #9aa3af;
+  text-decoration-thickness: 0.5pt;
+  text-underline-offset: 2pt;
+}
+
 .company-logo {
   position: absolute;
   left: -30pt;

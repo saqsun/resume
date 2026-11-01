@@ -1,22 +1,22 @@
 import type { Job } from "#data/types";
-import { CompanyLogo } from "./CompanyLogo";
+import { JobHeading } from "./JobHeading";
 import { ThumbnailList } from "./Thumbnail";
 
 export function JobEntry({
   job,
-  title,
+  showCompany = true,
   showImages = true,
 }: {
   job: Job;
-  title?: string;
+  showCompany?: boolean;
   showImages?: boolean;
 }) {
   return (
     <article className="job-entry">
-      <h3 className={title ? undefined : "employer-heading"}>
-        {!title && <CompanyLogo company={job.company} />}
-        {title ?? job.title}
-      </h3>
+      <JobHeading
+        role={job.role}
+        company={showCompany ? job.company : undefined}
+      />
       <p className="date">{job.date}</p>
       <p className="intro">{job.intro}</p>
       {job.bullets.length > 0 && (
