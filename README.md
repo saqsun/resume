@@ -65,10 +65,9 @@ Local development defaults to `/`. Validation and export use temporary servers a
 - `src/styles/resume.css` — ordered style entry point; component styles live in separate files alongside shared fonts, base styles, typography, and print overrides.
 - `public/assets/` — active images grouped into `profile/`, `companies/`, `games/`, and `open-source/`.
 - `public/pdf/` — the three current downloadable PDFs.
-- `sources/` — asset provenance notes; paths are relative to the project root.
 - Fonts are self-hosted through `@fontsource`: Source Sans 3 for body text and role titles, Barlow Condensed for the name and section headings.
 - `scripts/export-pdf.ts` — Chromium export and checks for page count in the DOM, content overflow, equal screen/print geometry, loaded assets, and uniform thumbnail dimensions.
 
 Conventions follow the portfolio: npm lockfile, Node 24 pin, React 19, strict project-reference TypeScript configs, `#components` / `#data` / `#styles` aliases, Oxfmt and Oxlint. Portfolio-only routing, animation, Tailwind, and deployment dependencies are omitted because the resume uses fixed print CSS and lightweight version routes.
 
-Game images are stored as 480 × 240 px WebP files in `public/assets/games/<company>/<project>.webp`. All thumbnails share an 80 × 40 pt frame, centered cover crop, rounded corners, and a subtle border. Project links come from LinkedIn attachments, the portfolio, and verified game catalogue pages. Project image provenance and destinations are recorded in `sources/linkedin-sources.json`. Screenshots and PDFs are generated artifacts, not editable source.
+Game images are stored as 480 × 240 px WebP files in `public/assets/games/<company>/<project>.webp`. All thumbnails share an 80 × 40 pt frame, centered cover crop, rounded corners, and a subtle border. Project links come from LinkedIn attachments, the portfolio, and verified game catalogue pages. Screenshots and PDFs are generated artifacts, not editable source.

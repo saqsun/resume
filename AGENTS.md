@@ -8,5 +8,5 @@
 - Do not fabricate game links or employment details.
 - Follow npm, Node 24, strict TypeScript, Oxfmt, and Oxlint conventions. Run `npm run check` after changes and verify page fit for all variants when content or layout changes.
 - During editing, update only the live preview. Export PDFs only when the user requests it. `npm run export:pdf` clears generated output and exports all three versions; verify each is two A4 pages.
-- Keep generated `output/`, `public/pdf/`, and `dist/` out of Git. Active images belong in categorized `public/assets/` directories; provenance notes belong in `sources/`.
+- Keep generated `output/`, `public/pdf/`, and `dist/` out of Git. Active images belong in categorized `public/assets/` directories.
 - Leave the user's live-preview server running. Do not open previews or side panels unless requested.
