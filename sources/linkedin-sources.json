@@ -3,17 +3,17 @@
   "accessed": "2026-11-01",
   "media": [
     {
-      "src": "public/assets/games/linkedin-ruby-sugar.jpg",
+      "src": "public/assets/games/rubyplay/giga-match-sugar-skull.webp",
       "alt": "Giga Match Sugar Skull",
       "href": "https://demo.rubyplay.com/launcher?gamename=rp_136&mode=offline"
     },
     {
-      "src": "public/assets/games/linkedin-ruby-spook.jpg",
+      "src": "public/assets/games/rubyplay/immortal-ways-spooktacular.webp",
       "alt": "Immortal Ways Spooktacular",
       "href": "https://demo.rubyplay.com/launcher?gamename=rp_126&mode=offline"
     },
     {
-      "src": "public/assets/games/linkedin-ruby-patriots.jpg",
+      "src": "public/assets/games/rubyplay/diamond-explosion-patriots.webp",
       "alt": "Diamond Explosion Patriots",
       "href": "https://demo.rubyplay.com/launcher?gamename=rp_124&mode=offline"
     },
@@ -33,12 +33,12 @@
       "originalFilename": "linkedin-flipper-dunk.jpg"
     },
     {
-      "src": "public/assets/games/linkedin-solitaire.jpg",
+      "src": "public/assets/games/armath/solitaire-klondike-chronicles.webp",
       "alt": "Solitaire: Klondike Chronicles",
       "href": "https://yandex.ru/games/app/170461"
     },
     {
-      "src": "public/assets/games/linkedin-break-crush.jpg",
+      "src": "public/assets/games/armath/break-and-crush.webp",
       "alt": "Break & Crush",
       "href": "https://yandex.ru/games/app/171326"
     },
@@ -48,12 +48,12 @@
       "originalFilename": "linkedin-dune.jpg"
     },
     {
-      "src": "public/assets/games/linkedin-roofbot.jpg",
+      "src": "public/assets/games/armath/roofbot.webp",
       "alt": "Roofbot",
       "href": "https://store.steampowered.com/app/545660/Roofbot/"
     },
     {
-      "src": "public/assets/games/linkedin-parallyzed.jpg",
+      "src": "public/assets/games/armath/parallyzed.webp",
       "alt": "Parallyzed",
       "href": "https://store.steampowered.com/app/545670/Parallyzed/"
     },

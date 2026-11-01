@@ -51,22 +51,22 @@ export const shared = {
       date: "Mar 2026 - May 2026",
       images: [
         {
-          src: "games/ixilix-redwing-landscape.png",
+          src: "games/ixilix/redwing.webp",
           alt: "RedWing",
           href: "https://www.winkingdom5.com/game/redwing",
         },
         {
-          src: "games/ixilix-hathix-landscape.png",
+          src: "games/ixilix/hathix.webp",
           alt: "HathiX",
           href: "https://www.winkingdom5.com/game/hathix",
         },
         {
-          src: "games/ixilix-rikshax-landscape.png",
+          src: "games/ixilix/rikshax.webp",
           alt: "RikshaX",
           href: "https://www.winkingdom5.com/game/rikshax",
         },
         {
-          src: "games/ixilix-udaanx-landscape.png",
+          src: "games/ixilix/udaanx.webp",
           alt: "UdaanX",
           href: "https://www.winkingdom5.com/game/udaanx",
         },
@@ -87,17 +87,17 @@ export const shared = {
       date: "Jul 2025 - Dec 2025",
       images: [
         {
-          src: "games/gs_playable2002-preview.webp",
+          src: "games/playrix/gardenscapes-rescue-puzzle.webp",
           alt: "Gardenscapes: rescue puzzle",
           href: "https://saqsun.github.io/projects/playable-ads/30.gs_playable2002/",
         },
         {
-          src: "games/gs_playable2003-preview.webp",
+          src: "games/playrix/gardenscapes-warm-the-room.webp",
           alt: "Gardenscapes: warm the room",
           href: "https://saqsun.github.io/projects/playable-ads/31.gs_playable2003/",
         },
         {
-          src: "games/gs_playable2005-preview.webp",
+          src: "games/playrix/gardenscapes-repair-the-crossing.webp",
           alt: "Gardenscapes: repair the crossing",
           href: "https://saqsun.github.io/projects/playable-ads/33.gs_playable2005/",
         },
@@ -110,17 +110,17 @@ export const shared = {
       date: "Sep 2024 - May 2025",
       images: [
         {
-          src: "games/linkedin-ruby-sugar.jpg",
+          src: "games/rubyplay/giga-match-sugar-skull.webp",
           alt: "Giga Match Sugar Skull",
           href: "https://demo.rubyplay.com/launcher?gamename=rp_136&mode=offline",
         },
         {
-          src: "games/linkedin-ruby-spook.jpg",
+          src: "games/rubyplay/immortal-ways-spooktacular.webp",
           alt: "Immortal Ways Spooktacular",
           href: "https://demo.rubyplay.com/launcher?gamename=rp_126&mode=offline",
         },
         {
-          src: "games/linkedin-ruby-patriots.jpg",
+          src: "games/rubyplay/diamond-explosion-patriots.webp",
           alt: "Diamond Explosion Patriots",
           href: "https://demo.rubyplay.com/launcher?gamename=rp_124&mode=offline",
         },
@@ -133,12 +133,12 @@ export const shared = {
       date: "Sep 2023 - Aug 2024",
       images: [
         {
-          src: "games/moc_pl21-preview.webp",
+          src: "games/voodoo/mob-control.webp",
           alt: "Mob Control",
           href: "https://saqsun.github.io/projects/playable-ads/35.moc_pl21/",
         },
         {
-          src: "games/cel_pl26-preview.webp",
+          src: "games/voodoo/collect-em-all.webp",
           alt: "Collect Em All! Clear the Dots",
           href: "https://saqsun.github.io/projects/playable-ads/36.cel_pl26/",
         },
@@ -151,22 +151,22 @@ export const shared = {
       date: "Jan 2016 - Sep 2023",
       images: [
         {
-          src: "games/linkedin-solitaire.jpg",
+          src: "games/armath/solitaire-klondike-chronicles.webp",
           alt: "Solitaire: Klondike Chronicles",
           href: "https://yandex.ru/games/app/170461",
         },
         {
-          src: "games/linkedin-break-crush.jpg",
+          src: "games/armath/break-and-crush.webp",
           alt: "Break & Crush",
           href: "https://yandex.ru/games/app/171326",
         },
         {
-          src: "games/linkedin-roofbot.jpg",
+          src: "games/armath/roofbot.webp",
           alt: "Roofbot",
           href: "https://store.steampowered.com/app/545660/Roofbot/",
         },
         {
-          src: "games/linkedin-parallyzed.jpg",
+          src: "games/armath/parallyzed.webp",
           alt: "Parallyzed",
           href: "https://store.steampowered.com/app/545670/Parallyzed/",
         },
@@ -179,12 +179,12 @@ export const shared = {
       date: "Jun 2014 - May 2015",
       images: [
         {
-          src: "games/tapventures-gameplay.webp",
+          src: "games/rockbite/tapventures.webp",
           alt: "Tapventures",
           href: "https://tapventures.en.uptodown.com/android",
         },
         {
-          src: "games/overlap2d-editor.jpg",
+          src: "games/rockbite/overlap2d.webp",
           alt: "Overlap2D",
           href: "https://libgdx.com/wiki/tools/overlap2d",
         },
@@ -197,12 +197,12 @@ export const shared = {
       date: "Jan 2011 - Jun 2014",
       images: [
         {
-          src: "games/paint-monsters-gameplay.webp",
+          src: "games/plexonic/paint-monsters.webp",
           alt: "Paint Monsters",
           href: "https://play.google.com/store/apps/details?id=air.com.sgn.paintmonsters.gp&hl=pt",
         },
         {
-          src: "games/panda-jam-gameplay.webp",
+          src: "games/plexonic/panda-jam.webp",
           alt: "Panda Jam",
           href: "https://panda-jam.en.uptodown.com/android",
         },
@@ -222,7 +222,7 @@ export const shared = {
     {
       name: "reparticle",
       imageFit: "cover" as const,
-      image: "open-source/reparticle-linkedin.jpg",
+      image: "open-source/reparticle.webp",
       description: "GPU particle engine with JSON-defined behavior",
       docs: "https://reparticlejs.github.io/reparticle/",
       source: "https://github.com/reparticlejs/reparticle",
