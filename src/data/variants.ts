@@ -1,17 +1,27 @@
+import type { JobContent } from "./types";
+import {
+  leadershipExperience,
+  armathAchievements,
+  rockbiteExperience,
+  plexonicExperience,
+} from "./shared.ts";
+
 export type VariantId =
   | "html5GameEngineer"
   | "frontendPlatformEngineer"
   | "technicalEngineeringLead";
 
 export interface VariantData {
+  employmentThumbnails: "all" | Record<string, string[]>;
   title: string;
   summary: string;
   skills: string[];
-  jobContent: Record<string, { intro: string; bullets: string[] }>;
+  jobContent: Record<string, JobContent>;
 }
 
 export const variants: Record<VariantId, VariantData> = {
   html5GameEngineer: {
+    employmentThumbnails: "all",
     title: "Senior / Lead HTML5 Game Engineer",
     summary:
       "HTML5 game engineer and technical lead with 15+ years building browser games, reusable engines, and production tooling. Expertise in TypeScript, PixiJS, WebGL, mobile performance, and delivery from prototype through release.",
@@ -37,32 +47,51 @@ export const variants: Record<VariantId, VariantData> = {
           "Led browser-game architecture and delivery using React, TypeScript, and PixiJS.",
         bullets: [
           "Built responsive UI, live results, side-bet flows, tutorials, and API integrations.",
-          "Reduced package size from ~62 MB to 9.6 MB; mentored developers and coordinated releases.",
+          [
+            "Reduced package size from ",
+            { text: "~62 MB to 9.6 MB", bold: true },
+            " and coordinated releases.",
+          ],
+          leadershipExperience.ixilix,
         ],
       },
       "playrix-lead": {
-        intro:
-          "Led framework direction, code reviews, and delivery automation.",
+        intro: [
+          ...leadershipExperience.playrix,
+          ", setting framework direction and reviewing code.",
+        ],
         bullets: [],
       },
       "playrix-framework": {
         intro:
           "Built runtimes, asset loading, physics, and animation with PixiJS, Matter.js, Spine, and GSAP.",
         bullets: [
-          "Reduced builds from ~4.2 MB to 1.4 MB and loading from ~2.5 s to 1.6 s.",
+          [
+            "Reduced builds from ",
+            { text: "~4.2 MB to 1.4 MB", bold: true },
+            " and loading from ",
+            { text: "~2.5 s to 1.6 s", bold: true },
+            ".",
+          ],
           "Optimized textures, audio, memory, and runtime for lower-end Android devices.",
         ],
       },
       rubyplay: {
-        intro: "Built shared HTML5 engine systems and production frameworks.",
+        intro: [
+          "Built ",
+          { text: "shared HTML5 engine systems", bold: true },
+          " and production frameworks.",
+        ],
         bullets: [
           "Implemented game states, asset loading, configuration, animation, and integrations.",
           "Improved runtime reliability and memory use; integrated Sentry diagnostics.",
         ],
       },
       voodoo: {
-        intro:
-          "Led HTML5 game delivery for mobile web and third-party platforms using TypeScript, PixiJS, Canvas, and WebGL.",
+        intro: [
+          { text: "Led HTML5 game delivery", bold: true },
+          " for mobile web and third-party platforms using TypeScript, PixiJS, Canvas, and WebGL.",
+        ],
         bullets: [
           "Built gameplay, controls, animation, feedback, and complete win/fail flows.",
           "Created reusable systems and templates; optimized assets, startup, and mobile performance.",
@@ -70,31 +99,29 @@ export const variants: Record<VariantId, VariantData> = {
         ],
       },
       armath: {
-        intro:
+        intro: [
           "Co-founded and led a studio building mobile, PC, and browser games for international clients.",
+          ...armathAchievements,
+        ],
         bullets: [
-          "Owned product direction, architecture, hiring, and delivery across multidisciplinary teams.",
+          leadershipExperience.armath,
           "Built gameplay, UI, physics, progression, internal tools, and prototyping workflows.",
-          "Managed clients, publishing, and live support; contributed to Roofbot and Parallyzed.",
+          "Managed clients, publishing, and live support.",
         ],
       },
-      rockbite: {
-        intro:
-          "Built iOS and Android games with Java, libGDX, and RoboVM. Contributed gameplay, UI, and platform systems.",
-        bullets: [
-          "Developed Overlap2D scene-editor tools and reusable asset workflows.",
-        ],
-      },
+      rockbite: rockbiteExperience,
       plexonic: {
-        intro:
-          "Developed mobile and social games for iOS, Android, and Facebook using ActionScript, Adobe AIR, and Flash.",
-        bullets: [
-          "Built gameplay, levels, UI, animation, and reusable systems with design, art, backend, and QA teams.",
-        ],
+        intro: plexonicExperience.intro,
+        bullets: [plexonicExperience.port],
       },
     },
   },
   frontendPlatformEngineer: {
+    employmentThumbnails: {
+      ixilix: ["games/ixilix/redwing.webp"],
+      "playrix-framework": ["games/playrix/gardenscapes-rescue-puzzle.webp"],
+      rockbite: ["games/rockbite/overlap2d.webp"],
+    },
     title: "Senior Frontend / Platform Engineer",
     summary:
       "Frontend / Platform Engineer with 15+ years building production applications, reusable architecture, and developer tooling. Strong in TypeScript, React, API integration, browser performance, and build systems; experienced owning delivery and mentoring engineers.",
@@ -120,24 +147,40 @@ export const variants: Record<VariantId, VariantData> = {
           "Led frontend architecture and delivery with React, TypeScript, and PixiJS.",
         bullets: [
           "Built reusable UI, responsive layouts, real-time features, analytics, and API integrations.",
-          "Reduced package size from ~62 MB to 9.6 MB; mentored engineers and coordinated releases.",
+          [
+            "Reduced package size from ",
+            { text: "~62 MB to 9.6 MB", bold: true },
+            " and coordinated releases.",
+          ],
+          leadershipExperience.ixilix,
         ],
       },
       "playrix-lead": {
-        intro: "Led platform standards, code reviews, and release workflows.",
+        intro: [
+          ...leadershipExperience.playrix,
+          ", owning platform standards, reviews, and releases.",
+        ],
         bullets: [],
       },
       "playrix-framework": {
         intro:
-          "Built TypeScript runtimes, templates, asset pipelines, and developer automation.",
+          "Built TypeScript runtimes, asset pipelines, and automation to reduce repetitive work.",
         bullets: [
-          "Reduced builds from ~4.2 MB to 1.4 MB and loading from ~2.5 s to 1.6 s.",
-          "Improved runtime efficiency and reduced repetitive implementation work.",
+          [
+            "Reduced builds from ",
+            { text: "~4.2 MB to 1.4 MB", bold: true },
+            " and loading from ",
+            { text: "~2.5 s to 1.6 s", bold: true },
+            ".",
+          ],
         ],
       },
       rubyplay: {
-        intro:
-          "Built reusable browser runtimes and shared platform components.",
+        intro: [
+          "Built ",
+          { text: "reusable browser runtimes", bold: true },
+          " and shared platform components.",
+        ],
         bullets: [
           "Implemented state management, asset loading, configuration, integrations, and release tooling.",
           "Integrated Sentry; improved observability, runtime stability, and debugging.",
@@ -147,37 +190,41 @@ export const variants: Record<VariantId, VariantData> = {
         intro:
           "Led high-performance browser experiences for mobile web and third-party platforms.",
         bullets: [
-          "Built responsive, animation-rich interfaces and shared systems with TypeScript, Canvas, and WebGL.",
+          [
+            "Built responsive, animation-rich interfaces and ",
+            { text: "reusable frontend systems", bold: true },
+            " with TypeScript, Canvas, and WebGL.",
+          ],
           "Improved loading, asset size, and cross-device performance through reusable templates.",
           "Supported developers through reviews, debugging, and release with product and design teams.",
         ],
       },
       armath: {
-        intro:
+        intro: [
           "Co-founded and led a studio delivering web, mobile, and interactive products for international clients.",
+          ...armathAchievements,
+        ],
         bullets: [
-          "Owned frontend architecture, product direction, hiring, and delivery workflows.",
+          leadershipExperience.armath,
+          "Owned frontend architecture, product direction, and delivery workflows.",
           "Built shared application foundations, components, and internal tooling across projects.",
           "Led multidisciplinary teams, client delivery, publishing, and live support while staying hands-on.",
         ],
       },
-      rockbite: {
-        intro:
-          "Built cross-platform applications and UI for iOS and Android with Java, libGDX, and RoboVM.",
-        bullets: [
-          "Contributed to Overlap2D’s visual editor, scene creation, and reusable asset workflows.",
-        ],
-      },
+      rockbite: rockbiteExperience,
       plexonic: {
-        intro:
-          "Developed interactive applications for iOS, Android, and Facebook with ActionScript, Adobe AIR, and Flash.",
+        intro: plexonicExperience.intro,
         bullets: [
+          plexonicExperience.port,
           "Built UI, application logic, animation, and reusable components with design, backend, and QA teams.",
         ],
       },
     },
   },
   technicalEngineeringLead: {
+    employmentThumbnails: {
+      armath: ["games/armath/roofbot.webp", "games/armath/parallyzed.webp"],
+    },
     title: "Technical Lead / Engineering Lead",
     summary:
       "Technical / Engineering Lead with 15+ years building products and leading teams. Hands-on in TypeScript, frontend architecture, browser performance, and tooling. Experienced in technical strategy, mentoring, cross-functional delivery, and production reliability.",
@@ -202,33 +249,53 @@ export const variants: Record<VariantId, VariantData> = {
         intro:
           "Owned frontend technical direction, delivery, and production readiness.",
         bullets: [
-          "Reviewed architecture, mentored engineers, and coordinated engineering, QA, design, and product.",
-          "Stayed hands-on in React, TypeScript, and PixiJS; reduced one package from ~62 MB to 9.6 MB.",
+          leadershipExperience.ixilix,
+          "Reviewed architecture and coordinated engineering, QA, design, and product.",
+          [
+            "Stayed hands-on in React, TypeScript, and PixiJS; reduced one package from ",
+            { text: "~62 MB to 9.6 MB", bold: true },
+            ".",
+          ],
         ],
       },
       "playrix-lead": {
-        intro:
-          "Led platform architecture, reviews, and cross-functional delivery.",
+        intro: [
+          ...leadershipExperience.playrix,
+          ", guiding architecture and cross-functional delivery.",
+        ],
         bullets: [],
       },
       "playrix-framework": {
         intro:
-          "Defined shared framework patterns, asset pipelines, and developer tooling.",
+          "Defined framework architecture and built asset pipelines and delivery automation.",
         bullets: [
-          "Built automation to accelerate delivery and reduce repetitive work.",
-          "Improved build size, loading, runtime efficiency, and mobile release reliability.",
+          [
+            "Reduced builds from ",
+            { text: "~4.2 MB to 1.4 MB", bold: true },
+            " and loading from ",
+            { text: "~2.5 s to 1.6 s", bold: true },
+            ".",
+          ],
         ],
       },
       rubyplay: {
-        intro: "Owned shared engine systems and production reliability.",
+        intro: [
+          {
+            text: "Owned shared engine systems and production reliability",
+            bold: true,
+          },
+          ".",
+        ],
         bullets: [
           "Guided architecture, reviews, integrations, and release tooling across projects.",
           "Integrated Sentry; improved diagnostics and resolved runtime issues with backend, QA, and product.",
         ],
       },
       voodoo: {
-        intro:
-          "Led technical delivery across browser projects, balancing architecture, performance, team support, and deadlines.",
+        intro: [
+          { text: "Led technical delivery", bold: true },
+          " across browser projects, balancing architecture, performance, team support, and deadlines.",
+        ],
         bullets: [
           "Defined shared patterns and templates; reviewed rendering and integration solutions.",
           "Coordinated engineering, design, art, product, and marketing from concept through release.",
@@ -236,25 +303,21 @@ export const variants: Record<VariantId, VariantData> = {
         ],
       },
       armath: {
-        intro:
+        intro: [
           "Co-founded and led a studio, owning technical strategy, team building, and delivery for international clients.",
+          ...armathAchievements,
+        ],
         bullets: [
           "Defined architecture, hiring, standards, roadmaps, and delivery processes.",
-          "Led multidisciplinary teams and mentored engineers while remaining hands-on.",
-          "Managed clients, scope, publishing, and live support; built tooling and contributed to Roofbot and Parallyzed.",
+          leadershipExperience.armath,
+          "Managed clients, scope, publishing, and live support; built production tooling.",
         ],
       },
-      rockbite: {
-        intro:
-          "Built cross-platform gameplay, UI, and platform systems for iOS and Android with Java, libGDX, and RoboVM.",
-        bullets: [
-          "Contributed to Overlap2D’s visual editor and reusable scene and asset workflows.",
-        ],
-      },
+      rockbite: rockbiteExperience,
       plexonic: {
-        intro:
-          "Developed iOS, Android, and Facebook games with ActionScript, Adobe AIR, and Flash.",
+        intro: plexonicExperience.intro,
         bullets: [
+          plexonicExperience.port,
           "Delivered gameplay, UI, animation, and reusable components alongside design, backend, art, and QA.",
         ],
       },

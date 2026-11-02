@@ -7,6 +7,7 @@ import type {
   Profile,
   ResolvedEmploymentEntry,
   ResolvedPage,
+  ThumbnailData,
 } from "./types";
 
 type JobLookup = Map<string, Job>;
@@ -40,10 +41,28 @@ export function resolveJobs(
   for (const job of shared.jobs) {
     const content = variant.jobContent[job.id];
     if (!content) throw new Error(`Missing ${variantId} content for ${job.id}`);
-    jobs.set(job.id, { ...job, ...content });
+    jobs.set(job.id, {
+      ...job,
+      ...content,
+      images: selectJobImages(job, variant.employmentThumbnails),
+    });
   }
 
   return jobs;
+}
+
+// Preserve the shared image order; unlisted jobs have no thumbnails.
+function selectJobImages(
+  job: { id: string; images?: ThumbnailData[] },
+  selection: VariantData["employmentThumbnails"],
+): ThumbnailData[] {
+  const availableImages = job.images ?? [];
+  if (selection === "all") return availableImages;
+
+  const selectedPaths = selection[job.id];
+  if (!selectedPaths) return [];
+
+  return availableImages.filter((image) => selectedPaths.includes(image.src));
 }
 
 function requireJob(jobId: string, jobs: JobLookup): Job {

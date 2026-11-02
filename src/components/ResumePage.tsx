@@ -2,6 +2,15 @@ import { withBasePath } from "#lib/paths";
 import type { ReactNode } from "react";
 import type { Profile } from "#data/types";
 
+interface ResumePageProps {
+  profile: Profile;
+  number: number;
+  totalPages: number;
+  showHeader?: boolean;
+  children: ReactNode;
+  sidebar: ReactNode;
+}
+
 export function ResumePage({
   profile,
   number,
@@ -9,14 +18,7 @@ export function ResumePage({
   showHeader,
   children,
   sidebar,
-}: {
-  profile: Profile;
-  number: number;
-  totalPages: number;
-  showHeader?: boolean;
-  children: ReactNode;
-  sidebar: ReactNode;
-}) {
+}: ResumePageProps) {
   return (
     <section
       className={`page page-${number}`}

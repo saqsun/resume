@@ -15,6 +15,9 @@ export function ResumeToolbar({
   showControls,
   onVariantChange,
 }: ResumeToolbarProps) {
+  const title = variants[variantId].title;
+  const pdfFile = pdfFiles[variantId];
+
   return (
     <div className="toolbar">
       <span className="toolbar-title">
@@ -22,12 +25,12 @@ export function ResumeToolbar({
           {showControls ? (
             <ExternalLink
               href={withBasePath(resumeRoutes[variantId])}
-              label={`Open ${variants[variantId].title} in a new tab`}
+              label={`Open ${title} in a new tab`}
             >
-              {variants[variantId].title} <span aria-hidden="true">↗</span>
+              {title} <span aria-hidden="true">↗</span>
             </ExternalLink>
           ) : (
-            variants[variantId].title
+            title
           )}
         </strong>
         <small>Two-page A4 preview</small>
@@ -46,10 +49,7 @@ export function ResumeToolbar({
             ))}
           </select>
         )}
-        <a
-          href={withBasePath(`pdf/${pdfFiles[variantId]}`)}
-          download={pdfFiles[variantId]}
-        >
+        <a href={withBasePath(`pdf/${pdfFile}`)} download={pdfFile}>
           Download PDF
         </a>
       </div>

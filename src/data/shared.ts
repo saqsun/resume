@@ -1,3 +1,80 @@
+import type { JobContent, JobText } from "./types";
+
+export const armathAchievements = [
+  " Led development of ",
+  {
+    text: "Roofbot",
+    href: "https://store.steampowered.com/app/545660/Roofbot/",
+  },
+  { text: " (Apple’s Free App of the Week)", bold: true },
+  " and ",
+  {
+    text: "Parallyzed",
+    href: "https://store.steampowered.com/app/545670/Parallyzed/",
+  },
+  { text: " (Google Play Indie Games Festival finalist)", bold: true },
+  ".",
+];
+
+// Nomination: https://android-developers.googleblog.com/2016/04/the-google-play-awards-coming-to-google.html
+export const rockbiteExperience: JobContent = {
+  intro: [
+    "Made substantial contributions to ",
+    {
+      text: "Tapventures",
+      href: "https://tapventures.en.uptodown.com/android",
+    },
+    ", a Java/libGDX game later nominated for the ",
+    {
+      text: "2016 Google Play Award for Best Use of Google Play Game Services",
+      bold: true,
+    },
+    ".",
+  ],
+  bullets: [
+    [{ text: "Ported Tapventures to iOS", bold: true }, " using RoboVM."],
+    [
+      "Contributed ",
+      {
+        text: "RoboVM iOS bindings",
+        href: "https://github.com/BlueRiverInteractive/robovm-ios-bindings/pull/134",
+      },
+      " to support the project’s SDK integration needs, including the Xplode SDK.",
+    ],
+    [
+      "Helped build ",
+      { text: "Overlap2D", href: "https://libgdx.com/wiki/tools/overlap2d" },
+      ", an open-source 2D scene and UI editor; contributed editor features and refactoring.",
+    ],
+  ],
+};
+
+export const plexonicExperience: { intro: JobText; port: JobText } = {
+  intro: [
+    "Made substantial contributions to ",
+    { text: "Panda Jam", href: "https://panda-jam.en.uptodown.com/android" },
+    "’s development using ActionScript, Adobe AIR, and Flash.",
+  ],
+  port: [
+    { text: "Independently ported Panda Jam", bold: true },
+    " from Flash to iOS and Android.",
+  ],
+};
+
+export const leadershipExperience = {
+  ixilix: [
+    "Managed ",
+    { text: "4 direct reports", bold: true },
+    ", held regular 1:1s, and mentored engineers.",
+  ],
+  playrix: ["Led a ", { text: "team of 4", bold: true }],
+  armath: [
+    "Built and led a ",
+    { text: "team of approximately 20", bold: true },
+    " at its peak; hired all team members across art, animation, development, and QA.",
+  ],
+} satisfies Record<string, JobText>;
+
 export const companies = {
   ixilix: {
     name: "Ixilix",

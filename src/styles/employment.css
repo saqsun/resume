@@ -114,7 +114,9 @@
   position: relative;
 }
 
-.employer-heading a {
+.employer-heading a,
+.job-entry > .intro a,
+.job-entry li a {
   color: inherit;
   text-decoration-line: underline;
   text-decoration-color: #9aa3af;

@@ -2,13 +2,12 @@ import type { Company } from "#data/types";
 import { CompanyLogo } from "./CompanyLogo";
 import { CompanyName } from "./CompanyName";
 
-export function JobHeading({
-  role,
-  company,
-}: {
+interface JobHeadingProps {
   role: string;
   company?: Company;
-}) {
+}
+
+export function JobHeading({ role, company }: JobHeadingProps) {
   if (!company) return <h3>{role}</h3>;
 
   return (

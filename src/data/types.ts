@@ -16,13 +16,24 @@ export interface Company {
   logo: string;
 }
 
-export interface Job {
+export interface FormattedText {
+  text: string;
+  href?: string;
+  bold?: boolean;
+}
+
+export type JobText = string | (string | FormattedText)[];
+
+export interface JobContent {
+  intro: JobText;
+  bullets: JobText[];
+}
+
+export interface Job extends JobContent {
   id: string;
   company: Company;
   role: string;
   date: string;
-  intro: string;
-  bullets: string[];
   images?: ThumbnailData[];
 }
 
